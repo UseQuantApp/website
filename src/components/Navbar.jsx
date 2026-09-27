@@ -79,12 +79,13 @@ export default function Navbar() {
       </div>
 
       <div className="hidden md:block">
-        <a
-          href=" https://wa.me/2349135622583"
-          className="bg-brand-orange text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-orange-600 transition-colors"
-        >
-          Try it out
-        </a>
+        <button
+        type="button"
+        disabled
+        className="w-full cursor-default rounded-full border border-brand-orange/20 bg-brand-orange/10 px-6 py-3 text-center font-semibold text-brand-orange/70 backdrop-blur-sm"
+      >
+        Coming Soon
+      </button>
       </div>
 
       <button
@@ -120,12 +121,13 @@ export default function Navbar() {
             FAQs
           </a>
 
-          <a
-            href="https://wa.me/2349135622583"
-            className="bg-brand-orange text-white px-6 py-3 rounded-full w-full font-semibold text-center"
+          <button
+            type="button"
+            disabled
+            className="w-full cursor-default rounded-full border border-brand-orange/20 bg-brand-orange/10 px-6 py-3 text-center font-semibold text-brand-orange/70 backdrop-blur-sm"
           >
-            Try it out
-          </a>
+            Coming Soon
+          </button>
         </div>
       )}
     </nav>
