@@ -8,8 +8,6 @@ import whatsappIcon from "../assets/whatsapp_icon.png";
 import zigzag from "../assets/zigzag.png";
 import line1 from "../assets/line_1.png";
 import line2 from "../assets/line_2.png";
-
-import { FaWhatsapp } from "react-icons/fa";
 import FadeUP from "./FadeUp";
 
 const steps = [
@@ -125,14 +123,28 @@ export default function HowItWorksSection() {
           )}
         </div>
 
-        <a
-          href=" https://wa.me/2349135622583"
+        <button
+          type="button"
+          disabled
           style={{ backgroundColor: ctaColor }}
-          className="text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl flex items-center gap-2 text-base sm:text-[20px] font-medium hover:opacity-90 transition-all duration-500"
+          className="text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl flex items-center gap-2 text-base sm:text-[20px] font-medium cursor-default"
         >
-          <FaWhatsapp />
-          <span>Get started</span>
-        </a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="w-5 h-5 sm:w-6 sm:h-6"
+          >
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 7v5l3 2" />
+          </svg>
+
+          <span>Coming Soon</span>
+        </button>
       </section>
     </FadeUP>
   );

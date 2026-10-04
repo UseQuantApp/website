@@ -13,167 +13,236 @@ import FadeUp from "./FadeUp";
 
 export default function Hero() {
   return (
-    <FadeUp>
-      <section className="relative w-full h-fit bg-white overflow-hidden px-0 mt-20">
-        <div className="max-w-7xl mx-auto px-6 pt-10 pb-16 lg:pt-20 lg:pb-0 max-[1024px]:pb-0">
-          <div className="hidden lg:grid lg:grid-cols-2 lg:items-center lg:justify-between lg:gap-0">
-            <div className="flex flex-col items-start justify-center relative">
-              <h1 className="md:text-[60px] text-[30px] xl:text-[85px] md:font-bold xl: text-gray-900 leading-[1.05] tracking-tight">
-                Your{" "}
-                <span className="text-[#4A42FF]">
-                  Academic <br /> Assistant
-                </span>{" "}
-                Inside <br /> WhatsApp
-              </h1>
+<FadeUp>
+  <section className="relative mt-24 w-full overflow-hidden bg-white">
+    <div className="mx-auto max-w-7xl px-6">
 
-              <div className="absolute top-[42%] -right-15 z-10 pointer-events-none">
-                <img
-                  src={CurvyDesktop}
-                  alt=""
-                  aria-hidden="true"
-                  className="w-50 object-contain"
-                />
-              </div>
+      {/* Launch Status */}
+      <div className="mb-3 flex justify-start">
+        <div className="flex max-w-10xl items-start gap-2.5 rounded-full border border-[#FF6600]/35 bg-[#FF6600]/8 px-4 py-2 text-xs leading-relaxed text-gray-600 sm:text-sm">
+          <span className="relative mt-[5px] flex h-2 w-2 shrink-0">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#FF6600] opacity-50" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-[#FF6600]" />
+          </span>
 
-              <p className="mt-7 text-base text-gray-500 leading-relaxed max-w-105">
-                Get lecture summaries, assignment reminders, PDFs, timetable
-                access, and CGPA tracking directly from WhatsApp.
-              </p>
+          <p>
+            <span className="font-semibold text-[#FF6600]">
+              Quant is under construction....
+            </span>{" "}
+            Join our community and be among the first to get early access.
+          </p>
+        </div>
+      </div>
 
-              <a
-                href=" https://wa.me/2349135622583"
-                className="mt-8 inline-flex items-center gap-2.5 bg-[#FF6600] text-white font-semibold text-base px-6 py-3.5 rounded-xl hover:opacity-90 transition-colors"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.18-1.62A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.66-.5-5.24-1.44l-.37-.22-3.87 1.02 1.03-3.77-.24-.39A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2c2.67 0 5.18 1.04 7.07 2.93A9.94 9.94 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.44-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.57-.49-.5-.67-.5H7.5c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.62.72.23 1.37.2 1.89.12.58-.09 1.76-.72 2-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" />
-                </svg>
-                Try Quant now
-              </a>
+      {/* Hero */}
+      <div className="pt-4 pb-16 lg:pt-10 lg:pb-0">
 
-              <span
-                className="absolute -left-2.5 -bottom-15 text-[#00C8FF] text-4xl select-none pointer-events-none"
-                style={{ lineHeight: 1 }}
-              >
-                ✦
-              </span>
-              <span
-                className="absolute left-15 -bottom-27.5 text-[#FF6B35] text-5xl select-none pointer-events-none"
-                style={{ lineHeight: 1 }}
-              >
-                ✶
-              </span>
-            </div>
+        {/* Desktop */}
+        <div className="hidden lg:grid lg:grid-cols-2 lg:items-center lg:gap-0">
 
-            <div className="relative flex justify-center items-center">
-              <img
-                src={BlueBadge}
-                alt=""
-                className="absolute w-37.5 top-19 left-3/4 transform -translate-x-1/2 z-10 "
-              />
-              <img
-                src={Hand}
-                alt="Quant WhatsApp Bot on a phone"
-                className="animate-[float_4s_ease-in-out_infinite] w-full scale-180 max-w-130 object-contain relative z-0"
-              />
-
-              <span
-                className="hidden sm:absolute top-[38%] -right-5 text-[#00C8FF] text-3xl select-none pointer-events-none"
-                style={{ lineHeight: 1 }}
-              >
-                ✦
-              </span>
-            </div>
-          </div>
-
-          <div className="hidden lg:flex justify-center mt-10">
-            <LogosPill />
-          </div>
-
-          {/* Mobile view */}
-
-          <div className="lg:hidden  flex flex-col justify-center items-center text-center pb-0">
-            <h1 className=" w-100 text-[50px] sm:text-[50px] md:text-[82px] font-bold text-gray-900 leading-[1.2] tracking-tight self-center">
+          {/* Left Content */}
+          <div className="relative flex flex-col items-start justify-center">
+            <h1 className="text-[60px] font-bold leading-[1.05] tracking-tight text-gray-900 xl:text-[85px]">
               Your{" "}
               <span className="text-[#4A42FF]">
-                Academic <br /> Assistant
+                Academic <br />
+                Assistant
               </span>{" "}
-              Inside <br /> WhatsApp
+              Inside <br />
+              WhatsApp
             </h1>
 
-            <p className="mt-5 md:text-xl sm:text-base text-gray-500 leading-relaxed max-w-90">
+            {/* Curvy Arrow */}
+            <div className="pointer-events-none absolute -right-15 top-[42%] z-10">
+              <img
+                src={CurvyDesktop}
+                alt=""
+                aria-hidden="true"
+                className="w-50 object-contain"
+              />
+            </div>
+
+            <p className="mt-7 max-w-105 text-base leading-relaxed text-gray-500">
               Get lecture summaries, assignment reminders, PDFs, timetable
               access, and CGPA tracking directly from WhatsApp.
             </p>
 
-            <a
-              href=" https://wa.me/2349135622583"
-              className="mt-7 inline-flex items-center gap-2.5 bg-brand-orange text-white font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-orange-600 transition-colors"
+            {/* CTA */}
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <a
+                href="https://chat.whatsapp.com/HG0lfoJxzudGGhUYHqieV4"
+                className="inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#FF6600] px-6 py-3.5 text-base font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-5 w-5"
+                >
+                  <circle cx="8" cy="6.5" r="2.3" />
+                  <circle cx="16" cy="6.5" r="2.3" />
+                  <path d="M5.2 19c.2-3.6 1.1-6.1 2.8-7.5" />
+                  <path d="M18.8 19c-.2-3.6-1.1-6.1-2.8-7.5" />
+                  <path d="M7.8 11.2c.7 1.7 2.1 2.8 4.2 2.8s3.5-1.1 4.2-2.8" />
+                  <path d="M5.8 12.2c1.3 2.7 3.3 4.1 6.2 4.1s4.9-1.4 6.2-4.1" />
+                  <path d="M8.5 15.2c.9 1.2 2.1 1.8 3.5 1.8s2.6-.6 3.5-1.8" />
+                </svg>
+
+                Join the Quant Community
+              </a>
+            </div>
+
+            {/* Decorative Stars */}
+            <span
+              className="pointer-events-none absolute -bottom-15 -left-2.5 select-none text-4xl leading-none text-[#00C8FF]"
+              aria-hidden="true"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="w-4 h-4"
-              >
-                <path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.18-1.62A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.66-.5-5.24-1.44l-.37-.22-3.87 1.02 1.03-3.77-.24-.39A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2c2.67 0 5.18 1.04 7.07 2.93A9.94 9.94 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.44-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.57-.49-.5-.67-.5H7.5c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.62.72.23 1.37.2 1.89.12.58-.09 1.76-.72 2-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" />
-              </svg>
-              Try Quant now
-            </a>
+              ✦
+            </span>
 
-            <div className="mt-8">
-              <LogosPill />
-            </div>
+            <span
+              className="pointer-events-none absolute -bottom-27.5 left-15 select-none text-5xl leading-none text-[#FF6B35]"
+              aria-hidden="true"
+            >
+              ✶
+            </span>
+          </div>
 
-            <div className="lg:mt-4 md:-mt-30 md:-ml-60 max-[768px]:-ml-60 max-[768px]:-mt-30 flex justify-center pointer-events-none">
-              <img
-                src={CurvyMobile}
-                alt=""
-                aria-hidden="true"
-                className="w-25 object-contain"
-              />
-            </div>
+          {/* Right Visual */}
+          <div className="relative flex items-center justify-center">
+            <img
+              src={BlueBadge}
+              alt=""
+              aria-hidden="true"
+              className="absolute left-3/4 top-19 z-10 w-37.5 -translate-x-1/2"
+            />
 
-            <div className="relative mt-2 w-full flex justify-center">
-              <img
-                src={BlueBadge}
-                alt=""
-                className="absolute w-37.5 top-45 left-5/8 max-[740px]:w-30 max-[740px]:top-30 max-[474px]:top-20 transform -translate-x-1/2 z-10 "
-              />
+            <img
+              src={Hand}
+              alt="Quant WhatsApp Bot on a phone"
+              className="relative z-0 w-full max-w-130 scale-180 animate-[float_4s_ease-in-out_infinite] object-contain"
+            />
 
-              <img
-                src={Hand}
-                alt="Quant WhatsApp Bot on a phone"
-                className="w-full md:w-225  object-contain"
-              />
-
-              <span
-                className="absolute left-2 top-[30%] text-[#00C8FF] text-2xl select-none pointer-events-none"
-                style={{ lineHeight: 1 }}
-              >
-                ✦
-              </span>
-              <span
-                className="absolute right-4 bottom-[15%] text-[#FF6B35] text-xl select-none pointer-events-none"
-                style={{ lineHeight: 1 }}
-              >
-                ✦
-              </span>
-              <span
-                className="absolute left-6 bottom-[10%] text-[#FF6B35] text-3xl select-none pointer-events-none"
-                style={{ lineHeight: 1 }}
-              >
-                ✶
-              </span>
-            </div>
+            <span
+              className="pointer-events-none absolute right-[-20px] top-[38%] hidden select-none text-3xl leading-none text-[#00C8FF] sm:block"
+              aria-hidden="true"
+            >
+              ✦
+            </span>
           </div>
         </div>
-      </section>
-    </FadeUp>
+
+        {/* Desktop Logos */}
+        <div className="mt-10 hidden justify-center lg:flex">
+          <LogosPill />
+        </div>
+
+        {/* Mobile */}
+        <div className="flex flex-col items-center pb-0 text-center lg:hidden">
+
+          <h1 className="w-full max-w-100 text-[50px] font-bold leading-[1.2] tracking-tight text-gray-900 sm:text-[50px] md:text-[82px]">
+            Your{" "}
+            <span className="text-[#4A42FF]">
+              Academic <br />
+              Assistant
+            </span>{" "}
+            Inside <br />
+            WhatsApp
+          </h1>
+
+          <p className="mt-5 max-w-90 text-base leading-relaxed text-gray-500 md:text-xl">
+            Get lecture summaries, assignment reminders, PDFs, timetable
+            access, and CGPA tracking directly from WhatsApp.
+          </p>
+
+          {/* Mobile CTA */}
+          <a
+            href="https://chat.whatsapp.com/HG0lfoJxzudGGhUYHqieV4"
+            className="mt-7 inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#FF6600] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-orange-600"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-5 w-5"
+            >
+              <circle cx="8" cy="6.5" r="2.3" />
+              <circle cx="16" cy="6.5" r="2.3" />
+              <path d="M5.2 19c.2-3.6 1.1-6.1 2.8-7.5" />
+              <path d="M18.8 19c-.2-3.6-1.1-6.1-2.8-7.5" />
+              <path d="M7.8 11.2c.7 1.7 2.1 2.8 4.2 2.8s3.5-1.1 4.2-2.8" />
+              <path d="M5.8 12.2c1.3 2.7 3.3 4.1 6.2 4.1s4.9-1.4 6.2-4.1" />
+              <path d="M8.5 15.2c.9 1.2 2.1 1.8 3.5 1.8s2.6-.6 3.5-1.8" />
+            </svg>
+
+            Join the Quant Community
+          </a>
+
+          {/* Logos */}
+          <div className="mt-8">
+            <LogosPill />
+          </div>
+
+          {/* Mobile Curvy Arrow */}
+          <div className="pointer-events-none -ml-60 -mt-30 flex justify-center max-[768px]:-ml-60">
+            <img
+              src={CurvyMobile}
+              alt=""
+              aria-hidden="true"
+              className="w-25 object-contain"
+            />
+          </div>
+
+          {/* Mobile Product Visual */}
+          <div className="relative mt-2 flex w-full justify-center">
+
+            <img
+              src={BlueBadge}
+              alt=""
+              aria-hidden="true"
+              className="absolute left-5/8 top-45 z-10 w-37.5 -translate-x-1/2 max-[740px]:top-30 max-[740px]:w-30 max-[474px]:top-20"
+            />
+
+            <img
+              src={Hand}
+              alt="Quant WhatsApp Bot on a phone"
+              className="w-full object-contain md:w-225"
+            />
+
+            <span
+              className="pointer-events-none absolute left-2 top-[30%] select-none text-2xl leading-none text-[#00C8FF]"
+              aria-hidden="true"
+            >
+              ✦
+            </span>
+
+            <span
+              className="pointer-events-none absolute bottom-[15%] right-4 select-none text-xl leading-none text-[#FF6B35]"
+              aria-hidden="true"
+            >
+              ✦
+            </span>
+
+            <span
+              className="pointer-events-none absolute bottom-[10%] left-6 select-none text-3xl leading-none text-[#FF6B35]"
+              aria-hidden="true"
+            >
+              ✶
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</FadeUp>
   );
 }
 

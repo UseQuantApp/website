@@ -1,6 +1,5 @@
 import {
   FaInstagram,
-  FaWhatsapp,
   FaTwitter,
   FaFacebook,
   FaLinkedin,
@@ -44,13 +43,27 @@ export default function Footer() {
                   tracking directly inside WhatsApp.
                 </p>
 
-                <a
-                  href=" https://wa.me/2349135622583"
-                  className="mt-6 inline-flex items-center gap-2.5 rounded-xl bg-white px-4 py-2 text-base font-medium text-[#FF6600] transition-opacity hover:cursor-pointer hover:opacity-90 "
+                <button
+                type="button"
+                disabled
+                className="mt-6 inline-flex items-center gap-2.5 rounded-xl bg-white px-4 py-2 text-base font-medium text-[#FF6600] cursor-default"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="-mt-0.5 h-5 w-5 sm:h-6 sm:w-6"
                 >
-                  <FaWhatsapp className="-mt-0.5 text-lg sm:text-xl" />
-                  Get Started
-                </a>
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 2" />
+                </svg>
+
+                Coming Soon
+              </button>
               </div>
 
               <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12.5">
@@ -212,14 +225,17 @@ export default function Footer() {
                   <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-[#FF6600]">
                     <MdEmail className="text-[14px]" />
                   </span>
-                  support@quantapp.com
+                  <a href="mailto:support@quantapp.com" className="hover:underline">support@quantapp.com</a>
                 </p>
 
                 <p className="flex items-center gap-2 text-sm sm:text-base lg:text-lg">
                   <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-[#FF6600]">
                     <FaPhoneAlt className="text-[12px]" />
                   </span>
-                  +234 805 1597 331
+
+                  <a href="tel:+2348051597331" className="hover:underline">
+                    +234 805 1597 331
+                  </a>
                 </p>
               </div>
             </div>
