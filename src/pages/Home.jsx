@@ -1,5 +1,6 @@
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
+import Navbar from "../components/home/Navbar";
+import Hero from "../components/home/Hero";
+import Ticker from "../components/home/Ticker";
 import FeatureLectureSummary from "../components/FeatureLectureSummary";
 import FeatureGetPDF from "../components/FeatureGetPDF";
 import FeatureReminders from "../components/FeatureReminders";
@@ -11,9 +12,10 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <main className="font-sans overflow-x-hidden">
+    <main className="quant-dot-grid font-sans overflow-x-hidden">
       <Navbar />
       <Hero />
+      <Ticker />
       <FeatureLectureSummary />
       <FeatureGetPDF />
       <FeatureReminders />
