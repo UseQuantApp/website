@@ -1,6 +1,7 @@
 import Navbar from "../components/home/Navbar";
 import Hero from "../components/home/Hero";
 import Ticker from "../components/home/Ticker";
+import WhatQuantDoes from "../components/home/WhatQuantDoes";
 import FeatureLectureSummary from "../components/FeatureLectureSummary";
 import FeatureGetPDF from "../components/FeatureGetPDF";
 import FeatureReminders from "../components/FeatureReminders";
@@ -16,10 +17,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Ticker />
-      <FeatureLectureSummary />
-      <FeatureGetPDF />
-      <FeatureReminders />
-      <FeatureCGPA />
+      <WhatQuantDoes />
       <HowItWorksSection />
       {/* <Pricing /> */}
       <FAQ />
