@@ -23,8 +23,7 @@ function PhotoGroup({ hidden = false }) {
           src={photo.src}
           alt={hidden || index >= photos.length ? "" : photo.alt}
           loading="lazy"
-          className="size-[260px] shrink-0 rounded-3xl object-cover sm:size-[300px]"
-        />
+className="aspect-[411/419] w-[260px] shrink-0 rounded-3xl object-cover sm:w-[340px]"        />
       ))}
     </div>
   );
@@ -39,7 +38,7 @@ export default function Community() {
           <span>BEYOND THE APP</span>
         </div>
 
-        <h2 className="mt-4 max-w-[780px] text-4xl font-normal leading-[1.1] text-quant-ink sm:text-5xl md:text-[56px]">
+        <h2 className="mt-4 max-w-5xl text-4xl font-normal leading-[1.1] text-quant-ink sm:text-5xl md:text-[56px]">
           Your University Experience Is Bigger Than Your Lecture Notes.
         </h2>
         <p className="mt-5 text-sm text-quant-ink sm:text-base">
@@ -51,10 +50,10 @@ export default function Community() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="quant-dot-grid mt-8 overflow-hidden rounded-3xl bg-[#E8F8FF] py-5 sm:py-8"
+          className="quant-dot-grid mt-8 overflow-hidden rounded-3xl bg-[#E8F8FF] pb-5 pt-5 sm:pb-6 sm:pt-6"
         >
-          <div className="flex flex-col gap-4 px-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-            <p className="text-base text-quant-ink sm:text-lg">
+          <div className="flex flex-col gap-4 px-5 sm:flex-row sm:items-center sm:justify-between sm:px-12">
+            <p className="text-base text-quant-ink sm:text-xl">
               You Don’t Have To Take Every Step Alone!
             </p>
             <a
@@ -77,9 +76,9 @@ export default function Community() {
             </div>
           </div>
 
-          <div className="mt-6 px-5 sm:mt-8 sm:px-8">
+          <div className="mt-5 px-5 sm:px-12">
             <div className="mx-auto max-w-[920px] rounded-2xl bg-white p-5 sm:p-6">
-              <p className="text-sm leading-relaxed text-quant-violet sm:text-base">
+              <p className="text-sm leading-relaxed text-quant-violet sm:text-lg">
                 Quant Community Brings Students Together Around Learning, Opportunities,
                 Technology, Careers And Personal Growth. It’s A Space To Discover Useful
                 Information, Connect With Other Students And Be Part Of Something That Helps You
