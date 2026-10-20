@@ -10,8 +10,9 @@ import FeatureReminders from "../components/FeatureReminders";
 import FeatureCGPA from "../components/FeatureCGPA";
 import HowItWorksSection from "../components/HowItWorks";
 // import Pricing from "../components/Pricing";
-import FAQ from "../components/FAQ";
-import Footer from "../components/Footer";
+import Faqs from "../components/home/Faqs";
+import Cta from "../components/home/Cta";
+import Footer from "../components/home/Footer";
 
 export default function Home() {
   return (
@@ -23,7 +24,8 @@ export default function Home() {
       <GetStarted />
       <Community />
       {/* <Pricing /> */}
-      <FAQ />
+      <Faqs />
+      <Cta />
       <Footer />
     </main>
   );
