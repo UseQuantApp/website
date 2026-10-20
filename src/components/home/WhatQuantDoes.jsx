@@ -1,18 +1,45 @@
 import { useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import { BellRing, GraduationCap, Library } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import materialsPhone from "../../assets/feature-materials.png";
 import remindersPhone from "../../assets/feature-reminders.png";
 import cgpaPhone from "../../assets/feature-cgpa.png";
 import { WHATSAPP_URL } from "../../constants/links";
+import booksIcon from "../../assets/icon-books.png";
+import bellIcon from "../../assets/icon-bell.png";
+
+// Designer-supplied icons: shown as-is when closed, tinted blue (image used as a mask) when open.
+function FeatureIcon({ src, active }) {
+  if (!active) {
+    return <img src={src} alt="" aria-hidden="true" className="size-6 object-contain" />;
+  }
+
+  const mask = `url(${src})`;
+  return (
+    <span
+      aria-hidden="true"
+      className="inline-block size-6 bg-quant-blue"
+      style={{
+        WebkitMaskImage: mask,
+        maskImage: mask,
+        WebkitMaskSize: "contain",
+        maskSize: "contain",
+        WebkitMaskRepeat: "no-repeat",
+        maskRepeat: "no-repeat",
+        WebkitMaskPosition: "center",
+        maskPosition: "center",
+      }}
+    />
+  );
+}
 
 // TODO: confirm the Course Materials and Reminders descriptions with Quant (placeholders).
 const features = [
   {
     id: "materials",
     title: "Course Materials",
-    Icon: Library,
+    iconSrc: booksIcon,
     description:
       "Find course PDFs, lecture notes and past questions in seconds, right inside WhatsApp.",
     image: materialsPhone,
@@ -21,7 +48,7 @@ const features = [
   {
     id: "reminders",
     title: "Reminders",
-    Icon: BellRing,
+    iconSrc: bellIcon,
     description:
       "Never miss a class or a deadline. Quant reminds you before lectures and assignments are due.",
     image: remindersPhone,
@@ -41,22 +68,26 @@ const features = [
 export default function WhatQuantDoes() {
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionRef = useRef(null);
-  const inView = useInView(sectionRef, { amount: 0.4 });
+  const inView = useInView(sectionRef, { amount: 0.15 });
   const active = features[activeIndex];
 
   const goNext = () => setActiveIndex((index) => (index + 1) % features.length);
 
   return (
     <section id="what-it-does" ref={sectionRef} className="px-4 py-10 sm:px-6 sm:py-14">
-      <div className="quant-dot-grid mx-auto max-w-6xl rounded-3xl bg-[#EEF0FF] p-5 sm:p-10">
-        <div className="flex items-center gap-2 text-[11px] text-quant-ink sm:text-xs">
+      <div className="quant-dot-grid mx-auto max-w-6xl rounded-3xl bg-[#EEF0FF] p-3 sm:p-10">
+        <div className="hidden items-center gap-2 text-[11px] text-quant-ink sm:text-xs md:flex">
           <span aria-hidden="true" className="size-[7px] rounded-full bg-quant-ink" />
           <span>WHAT QUANT DOES</span>
         </div>
 
-        <div className="mt-6 grid items-center gap-8 md:grid-cols-2 lg:gap-14">
-          <div className="group w-full max-w-[480px] rounded-3xl border border-[#E9F0FF] bg-white px-6 py-2 shadow-sm sm:px-8">
-            {features.map(({ id, title, Icon, description }, index) => {
+<div className="grid items-center gap-8 md:mt-6 md:grid-cols-2 lg:gap-14">
+         <div className="group w-full max-w-[480px] rounded-3xl border border-[#E9F0FF] bg-white px-4 py-4 shadow-sm sm:px-8 md:py-2">
+            <div className="mb-2 flex items-center gap-2 text-[11px] text-quant-ink md:hidden">
+              <span aria-hidden="true" className="size-[7px] rounded-full bg-quant-ink" />
+              <span>WHAT QUANT DOES</span>
+            </div>
+            {features.map(({ id, title, Icon, iconSrc, description, image, alt }, index) => {
               const isActive = index === activeIndex;
 
               return (
@@ -68,11 +99,15 @@ export default function WhatQuantDoes() {
                     aria-controls={`feature-panel-${id}`}
                     className="flex w-full items-center gap-3 py-6 text-left"
                   >
-                    <Icon
-                      aria-hidden="true"
-                      size={22}
-                      className={isActive ? "text-quant-blue" : "text-[#6B6B6B]"}
-                    />
+                    {iconSrc ? (
+                      <FeatureIcon src={iconSrc} active={isActive} />
+                    ) : (
+                      <Icon
+                        aria-hidden="true"
+                        size={22}
+                        className={isActive ? "text-quant-blue" : "text-[#6B6B6B]"}
+                      />
+                    )}
                     <span
                       className={`text-lg transition-colors sm:text-xl ${
                         isActive ? "text-quant-blue" : "text-[#666666]"
@@ -115,6 +150,11 @@ export default function WhatQuantDoes() {
                             }`}
                           />
                         </div>
+                      <img
+                          src={image}
+                          alt={alt}
+                          className="mx-auto mb-4 h-[420px] w-auto max-w-full object-contain md:hidden"
+                        />
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -123,7 +163,7 @@ export default function WhatQuantDoes() {
             })}
           </div>
 
-          <div className="flex justify-center md:justify-end">
+          <div className="hidden justify-center md:flex md:justify-end">
             <AnimatePresence mode="wait">
               <motion.img
                 key={active.id}

@@ -114,7 +114,7 @@ export default function GetStarted() {
         </div>
 
         <div className="mt-4 flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-10">
-          <h2 className="max-w-[560px] text-4xl font-normal leading-[1.1] text-quant-ink sm:text-5xl md:text-[56px]">
+          <h2 className="max-w-[560px] text-[28px] font-normal leading-[1.1] text-quant-ink sm:text-5xl md:text-[56px]">
             Up And Running In Under Two Minutes.
           </h2>
           <p className="max-w-[380px] text-sm leading-relaxed text-quant-ink">

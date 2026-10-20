@@ -13,7 +13,7 @@ function TickerItems() {
       {tickerItems.map((item) => (
         <span key={item} className="flex shrink-0 items-center gap-5">
           <span>{item}</span>
-          <span aria-hidden="true" className="text-[9px]">
+          <span aria-hidden="true" className="text-[11px] sm:text-[9px]">
             ●
           </span>
         </span>
@@ -24,7 +24,7 @@ function TickerItems() {
 
 export default function Ticker() {
   return (
-    <div className="overflow-hidden bg-quant-cyan py-2 text-[13px] text-white sm:py-[9px] sm:text-sm">
+    <div className="overflow-hidden bg-quant-cyan py-2.5 text-base text-white sm:py-[9px] sm:text-sm">
       <div className="quant-ticker-motion flex w-max items-center">
         <TickerItems />
         <TickerItems />

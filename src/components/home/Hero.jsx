@@ -10,21 +10,22 @@ export default function Hero() {
         initial={{ opacity: 0, y: 18 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-        className="mx-auto flex flex-col items-center px-5 pb-14 pt-28 text-center sm:pt-32"
+        className="mx-auto flex flex-col items-center px-9 pb-14 pt-[5.5rem] text-center sm:px-5 sm:pt-32"
       >
         <div className="flex items-center gap-2 text-[11px] text-quant-ink sm:text-xs">
           <span aria-hidden="true" className="size-[7px] rounded-full bg-quant-ink" />
           <span>MEET QUANT</span>
         </div>
 
-        <h1 className="mt-3 max-w-5xl text-[34px] font-normal leading-[1.08] text-quant-ink sm:text-5xl md:text-[56px]">
-          <span className="block">
+        <h1 className="mt-4 max-w-5xl text-[30px] font-normal leading-[1.1] text-quant-ink sm:text-5xl md:text-[56px]">
+          <span className="md:block">
             Your <span className="text-quant-violet">Academic Assistant</span>
           </span>
-          <span className="mt-1 block">Inside WhatsApp</span>
+          {" "}
+          <span className="md:mt-1 md:block">Inside WhatsApp</span>
         </h1>
 
-        <p className="mt-3 max-w-[420px] text-[13px] leading-[1.55] text-quant-ink sm:text-sm">
+        <p className="mt-4 max-w-[420px] text-sm leading-[1.55] text-quant-ink">
           Get Lecture Summaries, Assignment Reminders, PDFs, Timetable Access, And CGPA Tracking
           Directly From WhatsApp.
         </p>

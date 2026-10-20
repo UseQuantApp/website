@@ -45,14 +45,19 @@ export default function Faqs() {
 
   return (
     <section id="faqs" className="px-4 py-10 sm:px-6 sm:py-14">
-      <div className="mx-auto max-w-6xl">
+      <div className="relative mx-auto max-w-6xl">
+        <img
+          src={questionMark}
+          alt=""
+          aria-hidden="true"
+          className="absolute right-2 top-0 w-[88px] md:hidden"        />
         <div className="flex items-center gap-2 text-[11px] text-quant-ink sm:text-xs">
           <span aria-hidden="true" className="size-[7px] rounded-full bg-quant-ink" />
           <span>FAQs</span>
         </div>
 
-        <h2 className="mt-4 max-w-[480px] text-4xl font-normal leading-[1.1] text-quant-ink sm:text-5xl md:text-[56px]">
-          Frequently Asked Questions
+        <h2 className="mt-4 max-w-[480px] text-[28px] font-normal leading-[1.1] text-quant-ink sm:text-5xl md:text-[56px]">
+          Frequently<br className="md:hidden" /> Asked Questions
         </h2>
 
         <div className="mt-10 grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1.8fr)] lg:gap-16">

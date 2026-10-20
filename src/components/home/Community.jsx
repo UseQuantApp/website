@@ -3,16 +3,20 @@ import { ArrowUpRight } from "lucide-react";
 import gatheringPhoto from "../../assets/community-1.png";
 import lectureHallPhoto from "../../assets/community-2.png";
 import selfiePhoto from "../../assets/community-3.png";
+import tablePhoto from "../../assets/community-4.png";
+import readingPhoto from "../../assets/community-5.png";
 import { COMMUNITY_URL } from "../../constants/links";
 
 const photos = [
+  { src: tablePhoto, alt: "A student smiling at a picnic table with friends" },
   { src: gatheringPhoto, alt: "Students studying together on the grass" },
   { src: lectureHallPhoto, alt: "Three students working on a laptop in a lecture hall" },
   { src: selfiePhoto, alt: "Students taking a selfie together on campus" },
+  { src: readingPhoto, alt: "Three students reading a book together at a railing" },
 ];
 
-// Each group repeats the photos so it is wider than any screen and the loop stays seamless.
-const group = [...photos, ...photos];
+// Five photos at 340px are wider than any screen, so one group keeps the loop seamless.
+const group = photos;
 
 function PhotoGroup({ hidden = false }) {
   return (
@@ -38,7 +42,7 @@ export default function Community() {
           <span>BEYOND THE APP</span>
         </div>
 
-        <h2 className="mt-4 max-w-5xl text-4xl font-normal leading-[1.1] text-quant-ink sm:text-5xl md:text-[56px]">
+        <h2 className="mt-4 max-w-5xl text-[28px] font-normal leading-[1.15] text-quant-ink sm:text-5xl md:text-[56px]">
           Your University Experience Is Bigger Than Your Lecture Notes.
         </h2>
         <p className="mt-5 text-sm text-quant-ink sm:text-base">
@@ -60,7 +64,7 @@ export default function Community() {
               href={COMMUNITY_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex w-fit items-center gap-4 rounded-full bg-white py-2 pl-5 pr-2 text-sm text-quant-ink shadow-sm transition-opacity hover:opacity-90"
+              className="inline-flex w-full items-center justify-center gap-4 rounded-full bg-white py-2 pl-5 pr-2 text-sm text-quant-ink shadow-sm transition-opacity hover:opacity-90 sm:w-fit"
             >
               Explore Quant Community
               <span className="grid size-10 place-items-center rounded-full bg-quant-orange text-white">
@@ -69,7 +73,21 @@ export default function Community() {
             </a>
           </div>
 
-          <div className="mt-6 overflow-hidden sm:mt-8">
+          <div className="mt-5 grid grid-cols-2 gap-2.5 px-5 md:hidden">
+            {photos.map((photo, index) => (
+              <img
+                key={photo.src}
+                src={photo.src}
+                alt={photo.alt}
+                loading="lazy"
+                className={`w-full rounded-2xl object-cover ${
+                  index === photos.length - 1 ? "col-span-2 aspect-[7/5]" : "aspect-[139/150]"
+                }`}
+              />
+            ))}
+          </div>
+
+          <div className="mt-6 hidden overflow-hidden sm:mt-8 md:block">
             <div className="flex w-max animate-[quant-ticker-scroll_45s_linear_infinite] hover:[animation-play-state:paused] motion-reduce:animate-none">
               <PhotoGroup />
               <PhotoGroup hidden />

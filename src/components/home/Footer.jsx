@@ -50,7 +50,7 @@ export default function Footer() {
       >
         <div className="grid gap-10 md:grid-cols-2">
           <div>
-            <img src={logoWhite} alt="Quant." className="w-[150px] sm:w-[170px]" />
+            <img src={logoWhite} alt="Quant." className="w-[130px] sm:w-[170px]" />
             <div className="mt-6 flex gap-3">
               {socials.map(({ label, Icon, href }) => (
                 <a
@@ -105,7 +105,8 @@ export default function Footer() {
 
             <a
               href={`mailto:${SUPPORT_EMAIL}`}
-              className={`mt-8 inline-flex items-center gap-3 text-sm sm:text-base ${linkClass}`}
+              className={`mt-8 flex items-center justify-center gap-3 text-sm sm:text-base md:inline-flex md:justify-start
+                 ${linkClass}`}
             >
               <span className="grid size-8 place-items-center rounded-full bg-white text-quant-orange">
                 <Mail aria-hidden="true" size={15} />
@@ -118,22 +119,28 @@ export default function Footer() {
         <div className="mt-14 md:mt-auto md:pt-14">
           <form
             onSubmit={handleSubmit}
-            className="mx-auto flex w-full max-w-[630px] items-center gap-2 rounded-full bg-[#F4FAFF] p-1.5 pl-5 sm:p-2 sm:pl-6"
+            className="mx-auto flex w-full max-w-[630px] items-center gap-2 rounded-full bg-[#F4FAFF] p-1.5 pl-4 sm:p-2 sm:pl-6"
           >
             <label htmlFor="footer-message" className="sr-only">
               Need support or have a suggestion?
             </label>
-            <input
+            <textarea
               id="footer-message"
-              type="text"
+              rows={1}
               value={message}
               onChange={(event) => setMessage(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" && !event.shiftKey) {
+                  event.preventDefault();
+                  event.currentTarget.form.requestSubmit();
+                }
+              }}
               placeholder="Need Support or have a suggestion?"
-              className="min-w-0 flex-1 bg-transparent text-sm text-quant-ink outline-none placeholder:text-[#9AA3AD] sm:text-base"
+              className="h-9 min-w-0 flex-1 resize-none bg-transparent py-0 text-[13px] leading-[18px] text-quant-ink outline-none placeholder:text-[#9AA3AD] sm:h-6 sm:text-base"
             />
             <button
               type="submit"
-              className="inline-flex min-h-10 shrink-0 items-center gap-2 rounded-full bg-quant-blue px-5 text-sm text-white transition-opacity hover:opacity-90"
+              className="inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-full bg-quant-blue px-4 text-[13px] text-white sm:min-h-10 sm:gap-2 sm:px-5 sm:text-sm transition-opacity hover:opacity-90"
             >
               Send
               <Send aria-hidden="true" size={15} />

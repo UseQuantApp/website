@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Equal, X } from "lucide-react";
 import quantLogo from "../../assets/quant-logo.png";
 import { WHATSAPP_URL } from "../../constants/links";
 
@@ -37,7 +37,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed left-1/2 top-3 z-50 w-[calc(100%-2rem)] max-w-6xl -translate-x-1/2">
+    <header className="fixed left-1/2 top-3 z-50 w-[calc(100%-3rem)] max-w-6xl -translate-x-1/2 sm:w-[calc(100%-2rem)]">
       <nav
         aria-label="Main navigation"
         className="relative grid min-h-12 grid-cols-[minmax(0,1fr)_auto] items-center gap-3 rounded-full border border-quant-line bg-quant-nav px-4 shadow-sm backdrop-blur-md sm:min-h-[52px] sm:px-5 md:flex md:justify-between"
@@ -72,13 +72,13 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="grid size-9 place-items-center rounded-full text-quant-ink transition-colors hover:bg-quant-soft md:hidden"
+          className="grid size-10 place-items-center rounded-full bg-quant-orange text-white transition-opacity hover:opacity-90 md:hidden"
           aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={menuOpen}
           aria-controls="quant-mobile-menu"
           onClick={() => setMenuOpen((open) => !open)}
         >
-          {menuOpen ? <X aria-hidden="true" size={19} /> : <Menu aria-hidden="true" size={19} />}
+          {menuOpen ? <X aria-hidden="true" size={20} /> : <Equal aria-hidden="true" size={20} />}
         </button>
 
         {menuOpen && (
