@@ -2,6 +2,8 @@ import Navbar from "../components/home/Navbar";
 import Hero from "../components/home/Hero";
 import Ticker from "../components/home/Ticker";
 import WhatQuantDoes from "../components/home/WhatQuantDoes";
+import GetStarted from "../components/home/GetStarted";
+import Community from "../components/home/Community";
 import FeatureLectureSummary from "../components/FeatureLectureSummary";
 import FeatureGetPDF from "../components/FeatureGetPDF";
 import FeatureReminders from "../components/FeatureReminders";
@@ -18,7 +20,8 @@ export default function Home() {
       <Hero />
       <Ticker />
       <WhatQuantDoes />
-      <HowItWorksSection />
+      <GetStarted />
+      <Community />
       {/* <Pricing /> */}
       <FAQ />
       <Footer />
