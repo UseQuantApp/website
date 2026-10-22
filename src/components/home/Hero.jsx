@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
-import phoneMockup from "../../assets/hero-phone.png";
+import phoneMockup from "../../assets/hero-phone.webp";
 import { WHATSAPP_URL } from "../../constants/links";
 
 export default function Hero() {

@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, BookOpen, GraduationCap, Send } from "lucide-react";
-import stepOnePhone from "../../assets/step-1.png";
-import stepTwoPhone from "../../assets/step-2.png";
-import stepThreePhone from "../../assets/step-3.png";
-import stepFourPhone from "../../assets/step-4.png";
+import stepOnePhone from "../../assets/step-1.webp";
+import stepTwoPhone from "../../assets/step-2.webp";
+import stepThreePhone from "../../assets/step-3.webp";
+import stepFourPhone from "../../assets/step-4.webp";
 import numeralOne from "../../assets/step-num-1.png";
 import numeralTwo from "../../assets/step-num-2.png";
 import numeralThree from "../../assets/step-num-3.png";

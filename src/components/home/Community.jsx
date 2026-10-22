@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import gatheringPhoto from "../../assets/community-1.png";
-import lectureHallPhoto from "../../assets/community-2.png";
-import selfiePhoto from "../../assets/community-3.png";
-import tablePhoto from "../../assets/community-4.png";
-import readingPhoto from "../../assets/community-5.png";
+import gatheringPhoto from "../../assets/community-1.webp";
+import lectureHallPhoto from "../../assets/community-2.webp";
+import selfiePhoto from "../../assets/community-3.webp";
+import tablePhoto from "../../assets/community-4.webp";
+import readingPhoto from "../../assets/community-5.webp";
 import { COMMUNITY_URL } from "../../constants/links";
 
 const photos = [
