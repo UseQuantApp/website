@@ -6,11 +6,11 @@ import logoWhite from "../../assets/quant-logo-white.png";
 
 const SUPPORT_EMAIL = "hello@getquant.app";
 
-// TODO: replace the "#" links with Quant's real social profiles.
+// Quant's official profiles.
 const socials = [
-  { label: "LinkedIn", Icon: FaLinkedin, href: "#" },
-  { label: "X", Icon: FaXTwitter, href: "#" },
-  { label: "Instagram", Icon: FaInstagram, href: "#" },
+  { label: "LinkedIn", Icon: FaLinkedin, href: "https://www.linkedin.com/company/getquant-app/" },
+  { label: "X", Icon: FaXTwitter, href: "https://x.com/getquant_app" },
+  { label: "Instagram", Icon: FaInstagram, href: "https://www.instagram.com/getquant.app" },
 ];
 
 const exploreLinks = [
@@ -56,7 +56,7 @@ export default function Footer() {
                 <a
                   key={label}
                   href={href}
-                  aria-label={label}
+                  target="_blank" rel="noreferrer" target="_blank" rel="noreferrer" aria-label={label}
                   className="grid size-8 place-items-center rounded-full bg-white text-[#555555] transition-opacity hover:opacity-90"
                 >
                   <Icon aria-hidden="true" size={15} />

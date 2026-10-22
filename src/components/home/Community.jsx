@@ -73,21 +73,8 @@ export default function Community() {
             </a>
           </div>
 
-          <div className="mt-5 grid grid-cols-2 gap-2.5 px-5 md:hidden">
-            {photos.map((photo, index) => (
-              <img
-                key={photo.src}
-                src={photo.src}
-                alt={photo.alt}
-                loading="lazy"
-                className={`w-full rounded-2xl object-cover ${
-                  index === photos.length - 1 ? "col-span-2 aspect-[7/5]" : "aspect-[139/150]"
-                }`}
-              />
-            ))}
-          </div>
 
-          <div className="mt-6 hidden overflow-hidden sm:mt-8 md:block">
+          <div className="mt-5 overflow-hidden sm:mt-8">
             <div className="flex w-max animate-[quant-ticker-scroll_45s_linear_infinite] hover:[animation-play-state:paused] motion-reduce:animate-none">
               <PhotoGroup />
               <PhotoGroup hidden />
