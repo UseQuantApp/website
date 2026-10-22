@@ -14,10 +14,10 @@ const socials = [
 ];
 
 const exploreLinks = [
-  { label: "What it does", href: "#what-it-does" },
-  { label: "How it works", href: "#how-it-works" },
-  { label: "Community", href: "#community" },
-  { label: "FAQs", href: "#faqs" },
+  { label: "What it does", href: "/#what-it-does" },
+  { label: "How it works", href: "/#how-it-works" },
+  { label: "Community", href: "/#community" },
+  { label: "FAQs", href: "/#faqs" },
 ];
 
 // Approximation of the woven texture in the design.

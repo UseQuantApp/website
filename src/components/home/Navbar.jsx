@@ -42,7 +42,7 @@ export default function Navbar() {
         aria-label="Main navigation"
         className="relative grid min-h-12 grid-cols-[minmax(0,1fr)_auto] items-center gap-3 rounded-full border border-quant-line bg-quant-nav px-4 shadow-sm backdrop-blur-md sm:min-h-[52px] sm:px-5 md:flex md:justify-between"
       >
-        <a href="#home" aria-label="Quant home" className="flex w-fit items-center">
+        <a href="/" aria-label="Quant home" className="flex w-fit items-center">
           <img className="h-auto w-[88px] sm:w-[96px]" src={quantLogo} alt="Quant." />
         </a>
 
@@ -50,7 +50,7 @@ export default function Navbar() {
           {navigation.map(({ label, id }) => (
             <a
               key={id}
-              href={`#${id}`}
+              href={`/#${id}`}
               aria-current={activeSection === id ? "location" : undefined}
               className={`text-[13px] transition-colors hover:text-quant-blue ${
                 activeSection === id ? "text-quant-blue" : "text-quant-ink"
@@ -89,7 +89,7 @@ export default function Navbar() {
             {navigation.map(({ label, id }) => (
               <a
                 key={id}
-                href={`#${id}`}
+                href={`/#${id}`}
                 aria-current={activeSection === id ? "location" : undefined}
                 onClick={() => setMenuOpen(false)}
                 className={`rounded-2xl px-4 py-3 text-sm transition-colors hover:bg-quant-soft hover:text-quant-blue ${
