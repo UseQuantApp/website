@@ -4,11 +4,11 @@ import Footer from "./Footer";
 
 // Shared layout for the Privacy Policy and Terms of Service pages.
 // sections: [{ heading, lead?: string[], items?: (string | { label, text })[], after?: string[], contactEmail?: string }]
-export default function LegalPage({ title, lastUpdated, intro = [], sections }) {
+export default function LegalPage({ title, pageTitle, lastUpdated, intro = [], sections }) {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = `${title} | Quant`;
-  }, [title]);
+    document.title = pageTitle ?? `${title} | Quant`;
+  }, [title, pageTitle]);
 
   return (
     <div className="quant-dot-grid font-sans overflow-x-hidden">

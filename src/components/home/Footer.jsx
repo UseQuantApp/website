@@ -84,8 +84,7 @@ export default function Footer() {
                 <h3 className="text-base font-medium">Support</h3>
                 <ul className="mt-3 flex flex-col gap-2 text-sm sm:text-base">
                   <li>
-                    {/* TODO: there is no Terms of Service page yet. */}
-                    <a href="#" className={linkClass}>
+                    <a href="/terms" className={linkClass}>
                       Terms of Service
                     </a>
                   </li>

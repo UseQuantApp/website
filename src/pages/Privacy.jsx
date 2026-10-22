@@ -1,7 +1,7 @@
 import LegalPage from "../components/home/LegalPage";
 
-// TODO: confirm the exact "last updated" date with Quant.
-const LAST_UPDATED = "October 2026";
+// Same date as the Terms of Service.
+const LAST_UPDATED = "20 October 2026";
 
 const intro = [
   "Welcome to Quant, your academic companion. We're building a simpler way for students to access learning materials, get academic support, and navigate university life.",
