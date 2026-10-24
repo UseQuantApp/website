@@ -10,7 +10,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 18 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-        className="mx-auto flex flex-col items-center px-9 pb-14 pt-[5.5rem] text-center sm:px-5 sm:pt-32"
+        className="mx-auto flex flex-col items-center px-9 pb-14 pt-28 text-center sm:px-5 sm:pt-32"
       >
         <div className="flex items-center gap-2 text-[11px] text-quant-ink sm:text-xs">
           <span aria-hidden="true" className="size-[7px] rounded-full bg-quant-ink" />

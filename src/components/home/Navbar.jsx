@@ -37,10 +37,10 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed left-1/2 top-3 z-50 w-[calc(100%-3rem)] max-w-6xl -translate-x-1/2 sm:w-[calc(100%-2rem)]">
+    <header className="fixed left-1/2 top-4 sm:top-3 z-50 w-[calc(100%-3rem)] max-w-6xl -translate-x-1/2 sm:w-[calc(100%-2rem)]">
       <nav
         aria-label="Main navigation"
-        className="relative grid min-h-12 grid-cols-[minmax(0,1fr)_auto] items-center gap-3 rounded-full border border-quant-line bg-quant-nav px-4 shadow-sm backdrop-blur-md sm:min-h-[52px] sm:px-5 md:flex md:justify-between"
+        className="relative grid min-h-16 py-2 sm:py-0 grid-cols-[minmax(0,1fr)_auto] items-center gap-3 rounded-full border border-quant-line bg-quant-nav px-4 shadow-sm backdrop-blur-md sm:min-h-[52px] sm:px-5 md:flex md:justify-between"
       >
         <a href="/" aria-label="Quant home" className="flex w-fit items-center">
           <img className="h-auto w-[88px] sm:w-[96px]" src={quantLogo} alt="Quant." />
