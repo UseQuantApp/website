@@ -10,33 +10,28 @@ const faqs = [
   {
     question: "What is Quant?",
     answer:
-      "Quant is an academic assistant that works inside WhatsApp. It helps students find course materials, understand lecture content, keep track of deadlines and monitor their CGPA.",
+    "Quant is an academic assistant that works inside WhatsApp. It helps students find course materials, understand lecture content, keep track of deadlines and monitor their CGPA."
   },
   {
-    question: "Do I need to download an app?",
-    answer: "No. Quant works directly inside WhatsApp.",
+    question: "Who is Quant for??",
+    answer: "Quant is designed for university students who want an easier way to manage their academics. We’re starting with LASU students and building towards supporting students across more universities.",
   },
   {
-    question: "Can I track my CGPA?",
-    answer: "Yes. Quant calculates and monitors your progress towards your target CGPA.",
+    question: "How do I start?",
+    answer: "Start through Quant's official access link and follow the instructions provided. Depending on the feature, you may need to provide details such as your university, department, level, or course information to personalize your experience.",
   },
   {
-    question: "Does it work on low data?",
-    answer: "Yes. Quant is designed to be lightweight and accessible even on slower networks.",
+    question: "Is Quant free?",
+    answer: "Yes! You can get started with Quant and explore the features available to you. Our goal is to make academic life easier and more accessible for students.",
   },
   {
-    question: "How do I get lecture summaries?",
+    question: "What if my school or course isn't supported yet?",
     answer:
-      "Simply send the topic or course material you need help with, and Quant will provide a concise summary directly in WhatsApp.",
+      "We're still growing! If your school or course isn't available yet, let us know. Your feedback helps us understand where students need Quant most as we expand to support more schools and courses.",
   },
   {
-    question: "Can I download the original lecture materials?",
-    answer: "Yes. Pro users can request and receive course PDFs within WhatsApp.",
-  },
-  {
-    // TODO: the supplied answer started with "Yes" but says no subscription is needed; confirm with Quant.
-    question: "Do I need a premium plan to use Quant?",
-    answer: "No, you can still access all the available features for now without subscription.",
+    question: "What is Quant Community?",
+    answer: "Quant Community is a space for students to connect, share ideas, learn from one another, and grow together beyond the classroom. It's about building a community where students can support one another academically and make the university experience better.",
   },
 ];
 
