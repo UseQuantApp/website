@@ -12,7 +12,7 @@ import numeralFour from "../../assets/step-num-4.png";
 const steps = [
   {
     id: 1,
-    title: "Click ‘Try Quant Now’ Button",
+    title: "Click 'Try Quant Now' Button",
     text: "This Opens Your Direct Chat With Quant On WhatsApp.",
     Icon: ArrowUpRight,
     cardClass: "bg-[#FFF0E5]",
