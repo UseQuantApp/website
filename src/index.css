@@ -81,6 +81,7 @@
 }
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 @theme {
@@ -89,6 +90,15 @@ html {
   --color-brand-blue: #2563EB;
   --color-brand-purple: #7C3AED;
   --color-brand-green: #25D366;
+
+  --color-quant-orange: #FF6600;
+  --color-quant-blue: #006DFF;
+  --color-quant-violet: #4A42FF;
+  --color-quant-cyan: #00CCFF;
+  --color-quant-soft: #F5F5F5;
+  --color-quant-ink: #000000;
+  --color-quant-nav: rgb(253 253 253 / 0.92);
+  --color-quant-line: rgb(229 229 229 / 0.55);
 }
 @keyframes float {
   0%,100% {
@@ -97,5 +107,40 @@ html {
 
   50% {
     transform: translateY(-15px);
+  }
+}
+
+@utility quant-dot-grid {
+  background-image: radial-gradient(
+    color-mix(in oklab, var(--color-quant-ink) 10%, transparent) 0.65px,
+    transparent 0.65px
+  );
+  background-size: 4px 4px;
+}
+
+@keyframes quant-ticker-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility quant-ticker-motion {
+  animation: quant-ticker-scroll 36s linear infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes quant-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
   }
 }
