@@ -46,7 +46,7 @@ export default function Community() {
           Your University Experience Is Bigger Than Your Lecture Notes.
         </h2>
         <p className="mt-5 text-sm text-quant-ink sm:text-base">
-          There’s So Much To Learn Outside The Classroom, Too.
+          There's So Much To Learn Outside The Classroom, Too.
         </p>
 
         <motion.div
@@ -58,7 +58,7 @@ export default function Community() {
         >
           <div className="flex flex-col gap-4 px-5 sm:flex-row sm:items-center sm:justify-between sm:px-12">
             <p className="text-base text-quant-ink sm:text-xl">
-              You Don’t Have To Take Every Step Alone!
+              You Don't Have To Take Every Step Alone!
             </p>
             <a
               href={COMMUNITY_URL}
@@ -85,7 +85,7 @@ export default function Community() {
             <div className="mx-auto max-w-[920px] rounded-2xl bg-white p-5 sm:p-6">
               <p className="text-sm leading-relaxed text-quant-violet sm:text-lg">
                 Quant Community Brings Students Together Around Learning, Opportunities,
-                Technology, Careers And Personal Growth. It’s A Space To Discover Useful
+                Technology, Careers And Personal Growth. It's A Space To Discover Useful
                 Information, Connect With Other Students And Be Part Of Something That Helps You
                 Move Forward.
               </p>
