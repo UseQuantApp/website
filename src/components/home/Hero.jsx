@@ -54,6 +54,7 @@ export default function Hero() {
             className="absolute inset-x-[8%] top-[10%] -z-10 aspect-square rounded-full bg-quant-blue/15 blur-[72px]"
           />
           <img
+            id="hero-phone-slot"
             src={phoneMockup}
             alt="A WhatsApp conversation with Quant showing lecture notes, course PDFs, and student support"
             className="h-auto w-[85%] max-w-[480px] object-contain sm:w-full"

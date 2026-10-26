@@ -166,6 +166,7 @@ export default function WhatQuantDoes() {
           <div className="hidden justify-center md:flex md:justify-end">
             <AnimatePresence mode="wait">
               <motion.img
+                id="feature-phone-slot"
                 key={active.id}
                 src={active.image}
                 alt={active.alt}
