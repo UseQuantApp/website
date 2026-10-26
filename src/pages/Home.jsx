@@ -1,6 +1,7 @@
 import Navbar from "../components/home/Navbar";
 import Hero from "../components/home/Hero";
 import Ticker from "../components/home/Ticker";
+import PhoneTransition from "../components/home/PhoneTransition";
 import WhatQuantDoes from "../components/home/WhatQuantDoes";
 import GetStarted from "../components/home/GetStarted";
 import Community from "../components/home/Community";
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <main className="quant-dot-grid font-sans overflow-x-hidden">
       <Navbar />
+      <PhoneTransition />
       <Hero />
       <Ticker />
       <WhatQuantDoes />
