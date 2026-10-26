@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Mail, Send } from "lucide-react";
+import { Check, Loader2, Mail, Send } from "lucide-react";
 import { FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import logoWhite from "../../assets/quant-logo-white.png";
+import { SUGGESTIONS_API_URL } from "../../constants/links";
 
 const SUPPORT_EMAIL = "hello@getquant.app";
 
@@ -30,16 +31,31 @@ const linkClass = "transition-opacity hover:opacity-80";
 
 export default function Footer() {
   const [message, setMessage] = useState("");
+  // "idle" | "sending" | "sent" | "error" — shown on the button instead of an alert.
+  const [status, setStatus] = useState("idle");
+  const sending = status === "sending";
 
-  // Stopgap until Quant picks a backend: opens the visitor's email app addressed to support.
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     const body = message.trim();
-    if (!body) return;
+    if (!body || sending) return;
 
-    const subject = encodeURIComponent("Quant support / suggestion");
-    window.location.href = `mailto:${SUPPORT_EMAIL}?subject=${subject}&body=${encodeURIComponent(body)}`;
-    setMessage("");
+    setStatus("sending");
+    try {
+      const response = await fetch(SUGGESTIONS_API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: body }),
+      });
+      if (!response.ok) throw new Error(`Request failed: ${response.status}`);
+
+      setMessage("");
+      setStatus("sent");
+      setTimeout(() => setStatus("idle"), 3000);
+    } catch {
+      // Keep the message so the visitor can retry.
+      setStatus("error");
+    }
   }
 
   return (
@@ -127,7 +143,11 @@ export default function Footer() {
               id="footer-message"
               rows={1}
               value={message}
-              onChange={(event) => setMessage(event.target.value)}
+              disabled={sending}
+              onChange={(event) => {
+                setMessage(event.target.value);
+                if (status !== "sending") setStatus("idle");
+              }}
               onKeyDown={(event) => {
                 if (event.key === "Enter" && !event.shiftKey) {
                   event.preventDefault();
@@ -139,10 +159,34 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-full bg-quant-blue px-4 text-[13px] text-white sm:min-h-10 sm:gap-2 sm:px-5 sm:text-sm transition-opacity hover:opacity-90"
+              disabled={sending}
+              aria-live="polite"
+              className="inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-full bg-quant-blue px-4 text-[13px] text-white sm:min-h-10 sm:gap-2 sm:px-5 sm:text-sm transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
             >
-              Send
-              <Send aria-hidden="true" size={15} />
+              {sending && (
+                <>
+                  Sending
+                  <Loader2 aria-hidden="true" size={15} className="animate-spin" />
+                </>
+              )}
+              {status === "sent" && (
+                <>
+                  Sent
+                  <Check aria-hidden="true" size={15} />
+                </>
+              )}
+              {status === "error" && (
+                <>
+                  Try again
+                  <Send aria-hidden="true" size={15} />
+                </>
+              )}
+              {status === "idle" && (
+                <>
+                  Send
+                  <Send aria-hidden="true" size={15} />
+                </>
+              )}
             </button>
           </form>
 
